@@ -1,0 +1,104 @@
+# ============================= Site specific =============================
+baseURL: "https://tabbedout.wiki/"
+
+languages:
+  en:
+    languageName: English
+    languageCode: en
+    languageDirection: ltr
+    contentDir: content/en
+    title: "TabbedOut Wiki"
+    weight: 1
+
+taxonomies:
+  category: "categories"
+  tag: "tags"
+
+# ========================== DO NOT TOUCH BELOW ==========================
+# GitHub Pages
+caches:
+  images:
+    dir: :cacheDir/images
+
+# Git info
+enableGitInfo: true
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+pluralizeListTitles: false
+enableRobotsTXT: true
+sitemap:
+  changeFreq: daily
+
+outPutFormats:
+  json:
+    mediaType: "application/json"
+    baseName: "index"
+    isPlainText: true
+
+outputs:
+  home:
+    - "html"
+  section:
+    - "html"
+    - "json"
+  taxonomy:
+    - "html"
+  term:
+    - "html"
+services:
+  rss:
+    limit: 42
+
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    disable: true
+    respectDoNotTrack: true
+  instagram:
+    disable: true
+    simple: true
+  vimeo:
+    disable: true
+    enableDNT: true
+    simple: true
+  x:
+    disable: true
+    enableDNT: true
+    simple: true
+  youTube:
+    disable: true
+    privacyEnhanced: true
+
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+        title: true
+    renderer:
+      unsafe: false
+      xhtml: false
+      hardWraps: false
+    extensions:
+      linkify: false
+      passthrough:
+        delimiters:
+          block:
+            - - \[
+              - \]
+          inline:
+            - - \(
+              - \)
+          enable: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: false
+
+module:
+  workspace: hugo.work
+  #  noVendor: "**" # Leave commented - Can help test module updates
+  imports:
+    path: "github.com/TabbedOutWiki/quetzal"

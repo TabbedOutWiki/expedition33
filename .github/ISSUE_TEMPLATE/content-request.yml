@@ -1,0 +1,32 @@
+name: Content request
+description: Request content to be added or revised.
+title: "[Request]: "
+labels: ["request", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Contributions of all kinds are welcome. Please consider making the changes you wish to see.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Request type
+      multiple: true
+      options:
+        - Add new content
+        - Update existing content
+        - Rewrite content
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Request details
+      placeholder: Add a section/article about xyz
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Supporting sources/references
+      description: If necessary, provide any links to verify claims.

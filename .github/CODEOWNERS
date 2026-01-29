@@ -1,0 +1,21 @@
+# Last pattern takes priority
+# Much of this file is redundant, mainly ensuring configuration and automation file are restricted
+# while content .md files are divided into teams.
+# Doc: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners
+
+# Default
+* @TabbedOutWiki/staff
+
+# Content
+/content/**/*.md @TabbedOutWiki/content-moderation
+
+# Root directories
+/.github/ @TabbedOutWiki/developers
+/.vscode/ @TabbedOutWiki/developers
+
+# Root files
+/hugo.yaml @TabbedOutWiki/developers
+/pagefind.yaml @TabbedOutWiki/developers
+
+# Leave at the very end
+/.github/CODEOWNERS @TabbedOutWiki/staff

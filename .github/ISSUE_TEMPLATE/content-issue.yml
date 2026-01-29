@@ -1,0 +1,30 @@
+name: Content issue
+description: Report a content-related issue.
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Contributions of all kinds are welcome. Please consider making the changes you wish to see.
+  - type: input
+    id: url
+    attributes:
+      label: URL(s)
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Where is the issue occurring?
+  - type: textarea
+    id: problem
+    attributes:
+      label: Describe the problem
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected outcome
+    validations:
+      required: true
