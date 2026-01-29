@@ -10,8 +10,8 @@ tabbedout:
   docURL: "https://tabbedout.wiki/"
   cdnURL: "https://cdn.tabbedout.wiki/"
 repository:
-  mainURL: "https://github.com/TabbedOutWiki/quetzal"
-  editURL: "https://github.com/TabbedOutWiki/quetzal/edit/main/exampleSite/content/"
-  viewURL: "https://github.com/TabbedOutWiki/quetzal/blob/main/exampleSite/content/"
+  mainURL: "https://github.com/TabbedOutWiki/expedition33"
+  editURL: "https://github.com/TabbedOutWiki/expedition33/edit/main/content/"
+  viewURL: "https://github.com/TabbedOutWiki/expedition33/blob/main/content/"
 whitelist:
-  linkRegex: '^([a-z0-9-]+\.)?(tabbedout\.wiki|wikipedia\.org|toolkits\.gg|gohugo\.io)$'
+  linkRegex: '^([a-z0-9-]+\.)?(tabbedout\.wiki|wikipedia\.org|github\.com|toolkits\.gg|gohugo\.io)$'

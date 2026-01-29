@@ -1,5 +1,5 @@
 # ============================= Site specific =============================
-baseURL: "https://tabbedout.wiki/"
+baseURL: "https://expedition33.tabbedout.wiki/"
 
 languages:
   en:
@@ -7,8 +7,15 @@ languages:
     languageCode: en
     languageDirection: ltr
     contentDir: content/en
-    title: "TabbedOut Wiki"
+    title: "Clair Obscur: Expedition 33 Wiki"
     weight: 1
+  fr:
+    languageName: Français
+    languageCode: fr
+    languageDirection: ltr
+    contentDir: content/fr
+    title: "Clair Obscur: Expedition 33 Wiki"
+    weight: 2
 
 taxonomies:
   category: "categories"
