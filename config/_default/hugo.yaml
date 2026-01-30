@@ -43,6 +43,7 @@ outPutFormats:
     baseName: "index"
     isPlainText: true
 
+sectionPagesMenu: main
 outputs:
   home:
     - "html"
