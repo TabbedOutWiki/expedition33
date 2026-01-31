@@ -1,0 +1,59 @@
+n/a:
+  other: 'N/A'
+
+level:
+  other: 'level'
+level_with_count:
+  other: 'level {{ . }}'
+scaling:
+  other: 'scaling'
+
+power:
+  other: 'Power'
+element:
+  other: 'Element'
+attribute:
+  one: 'attribute'
+  other: 'attributes'
+
+# Attributes
+agility:
+  other: 'Agility'
+defense:
+  other: 'Defense'
+luck:
+  other: 'Luck'
+might:
+  other: 'Might'
+vitality:
+  other: 'Vitality'
+
+# Damage types / elements
+physical:
+  other: 'Physical'
+light:
+  other: 'Light'
+dark:
+  other: 'Dark'
+void:
+  other: 'Void'
+fire:
+  other: 'Fire'
+ice:
+  other: 'Ice'
+earth:
+  other: 'Earth'
+lightning:
+  other: 'Lightning'
+
+# Currencies
+cc1:
+  other: '{{ . }}x Chroma Catalyst'
+cc2:
+  other: '{{ . }}x Polished Chroma Catalyst'
+cc3:
+  other: '{{ . }}x Resplendent Chroma Catalyst'
+cc4:
+  other: '{{ . }}x Grandiose Chroma Catalyst'
+cc5:
+  other: '{{ . }}x Perfect Chroma Catalyst'

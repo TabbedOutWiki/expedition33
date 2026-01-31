@@ -1,0 +1,126 @@
+{{ $title := ($.Page.Params.title | title) }}
+{{ $element := ($.Page.Params.element | lower) }}
+{{ $primary_attr := ($.Page.Params.attribute.primary | lower) }}
+{{ $secondary_attr := false }}
+{{ if $.Page.Params.attribute.secondary }}
+  {{ $secondary_attr = ($.Page.Params.attributes.secondary | lower) }}
+{{ end }}
+{{ $passives := $.Page.Params.passives }}
+{{ $multiplier := $.Page.Params.multiplier }}
+<div class="infobox-container tabs">
+  <!-- Tabs -->
+  <div class="tabs-container" role="tablist">
+    <button
+      id="tab-label-0"
+      class="tab-control frameless active"
+      type="button"
+      role="tab"
+      data-controls="tab-panel-0"
+      aria-controls="tab-panel-0"
+      aria-selected="true">
+      <span class="focus">{{ T "level_with_count" 1 | title }}</span>
+    </button>
+    <button
+      id="tab-label-1"
+      class="tab-control frameless"
+      type="button"
+      role="tab"
+      data-controls="tab-panel-1"
+      aria-controls="tab-panel-1"
+      aria-selected="false"
+      tabindex="-1">
+      <span class="focus">{{ T "level_with_count" 33 | title }}</span>
+    </button>
+  </div>
+  <!-- Infoboxes -->
+  <aside id="tab-panel-0" data-panel="tab-panel-0" class="infobox" role="tabpanel" tabindex="0" aria-labelledby="tab-label-0">
+    <table>
+      <thead>
+        <tr>
+          <th class="infobox-title" colspan="100%">{{ $title }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="font-bold text-center">{{ T "power" | title }}</td>
+          <td>{{ math.Ceil (mul 45 $multiplier) | lang.FormatNumber 0 }}</td>
+        </tr>
+        <tr>
+          <td class="font-bold text-center">{{ T "element" | title }}</td>
+          <td>{{ T $element | title }}</td>
+        </tr>
+        <tr><th class="font-bold text-center" colspan="100%">Scaling</th></tr>
+        <tr>
+          <td class="font-bold text-center">{{ T $primary_attr | title }}</td>
+          <td>C</td>
+        </tr>
+        {{ if $secondary_attr }}
+          <tr>
+            <td class="font-bold text-center">{{ T $secondary_attr | title }}</td>
+            <td>D</td>
+          </tr>
+        {{ end }}
+        {{ with $passives }}
+          <tr><th class="text-center" colspan="100%">Passives</th></tr>
+          <tr>
+            <td class="font-bold text-center" style="color:lightblue">{{ T "level" | title }}<br>4</td>
+            <td>{{ index . 0 | markdownify }}</td>
+          </tr>
+          <tr>
+            <td class="font-bold text-center" style="color:rgb(218, 148, 250)">{{ T "level" | title }}<br>10</td>
+            <td>{{ index . 1 | markdownify }}</td>
+          </tr>
+          <tr>
+            <td class="font-bold text-center" style="color:beige">{{ T "level" | title }}<br>20</td>
+            <td>{{ index . 2 | markdownify }}</td>
+          </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </aside>
+  <aside id="tab-panel-1" data-panel="tab-panel-1" class="infobox is-hidden" role="tabpanel" tabindex="0" aria-labelledby="tab-label-1">
+    <table>
+      <thead>
+        <tr>
+          <th class="infobox-title" colspan="100%">{{ $title }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="font-bold text-center">{{ T "power" | title }}</td>
+          <td>{{ math.Ceil (mul 3228 $multiplier) | lang.FormatNumber 0 }}</td>
+        </tr>
+        <tr>
+          <td class="font-bold text-center">{{ T "element" | title }}</td>
+          <td>{{ T $element | title }}</td>
+        </tr>
+        <tr><th class="text-center" colspan="100%">Scaling</th></tr>
+        <tr>
+          <td class="font-bold text-center">{{ T $primary_attr | title }}</td>
+          <td>S</td>
+        </tr>
+        {{ if $secondary_attr }}
+          <tr>
+            <td class="font-bold text-center">{{ T $secondary_attr | title }}</td>
+            <td>A</td>
+          </tr>
+        {{ end }}
+        {{ with $passives }}
+          <tr><th class="text-center" colspan="100%">Passives</th></tr>
+          <tr>
+            <td class="font-bold text-center" style="color:lightblue">{{ T "level" | title }}<br>4</td>
+            <td>{{ index . 0 | markdownify }}</td>
+          </tr>
+          <tr>
+            <td class="font-bold text-center" style="color:rgb(218, 148, 250)">{{ T "level" | title }}<br>10</td>
+            <td>{{ index . 1 | markdownify }}</td>
+          </tr>
+          <tr>
+            <td class="font-bold text-center" style="color:beige">{{ T "level" | title }}<br>20</td>
+            <td>{{ index . 2 | markdownify }}</td>
+          </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </aside>
+</div>
