@@ -8,9 +8,9 @@ attributes:
   primary: {{ .Site.Params.primary_attribute | lower }}
   {{ if .Site.Params.secondary_attribute }}secondary: {{ .Site.Params.secondary_attribute | lower }}{{ end }}
 passives:
-  - 'Passive1'
-  - 'Passive2'
-  - 'Passive3'
+  - ""
+  - ""
+  - ""
 multiplier: {{ .Site.Params.multiplier }}
 
 categories:

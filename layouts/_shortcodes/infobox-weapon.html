@@ -1,8 +1,8 @@
 {{ $title := ($.Page.Params.title | title) }}
 {{ $element := ($.Page.Params.element | lower) }}
-{{ $primary_attr := ($.Page.Params.attribute.primary | lower) }}
+{{ $primary_attr := ($.Page.Params.attributes.primary | lower) }}
 {{ $secondary_attr := false }}
-{{ if $.Page.Params.attribute.secondary }}
+{{ if $.Page.Params.attributes.secondary }}
   {{ $secondary_attr = ($.Page.Params.attributes.secondary | lower) }}
 {{ end }}
 {{ $passives := $.Page.Params.passives }}

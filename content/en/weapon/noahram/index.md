@@ -4,7 +4,7 @@ title: Noahram
 description: "Noahram is a weapon in Clair Obscur: Expedition 33 equipable by Gustave and Verso. It uses physical attacks that scale in power with the Vitality attribute and is the starting weapon for Gustave."
 
 element: physical
-attribute:
+attributes:
   primary: vitality
 multiplier: 0.7
 
